@@ -1,9 +1,8 @@
 package _04_05.before;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -25,6 +24,15 @@ public class Main {
         }
         Collections.sort(capitalisedFruit);
         return capitalisedFruit;
+    }
+
+    static List<String> processedWithStreams(List<String> fruit){
+        return fruit.stream()
+            .map(String::toUpperCase)
+            .filter(item -> item.startsWith("P"))
+            .sorted()
+            .collect(Collectors.toList());
+        
     }
 
 }
