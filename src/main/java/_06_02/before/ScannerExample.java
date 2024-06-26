@@ -17,11 +17,12 @@ public class ScannerExample {
         int answer = scan.nextInt();
         if (answer == 0){
              yob = 2023 - age;
-            System.out.print(name + " were you born in " + yob + "!");
+             System.out.print(name + " were you born in " + yob + "!");
             answer = scan.nextInt();
         }else{
             System.out.println("I knew it!");
         }
+        scan.close();
 
         
 
